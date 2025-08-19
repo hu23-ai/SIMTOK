@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:simtalk/page/historychat_page.dart';
 import 'chatting_page.dart';
+import 'package:http/http.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -40,18 +41,18 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              height: 100, width: 100,
-              decoration: BoxDecoration(
-                color: Colors.blue
-              ),
-              child: ElevatedButton(
-                child : Text('목록'),
-                onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => HistorychatPage()));
-                },
-              ),
-            ),
+            // Container(
+            //   height: 100, width: 100,
+            //   decoration: BoxDecoration(
+            //     color: Colors.blue
+            //   ),
+            //   child: ElevatedButton(
+            //     child : Text('목록'),
+            //     onPressed: (){
+            //       Navigator.push(context, MaterialPageRoute(builder: (context) => HistorychatPage()));
+            //     },
+            //   ),
+            // ),
             SizedBox(width: 10,),
             Container(
               height: 100, width: 100,
@@ -61,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: ElevatedButton(
                   child : Text('채팅'),
                   onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => ChattingPage()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => ChatPage()));
                   },
               ),
             ),
